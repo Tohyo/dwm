@@ -32,6 +32,7 @@ static const Rule rules[] = {
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 	{ "Slack",    NULL,       NULL,       1 << 1,       0,           -1 },
 	{ "Spotify",  NULL,       NULL,       1 << 2,       0,           -1 },
+	{ "Todoist",  NULL,       NULL,       1 << 1,       0,           -1 },
 };
 
 /* layout(s) */
@@ -68,6 +69,7 @@ static const char *termcmd[]  = { "kitty", NULL };
 static const char *cursorcmd[] = { "cursor", "--no-sandbox", NULL };
 static const char *slackcmd[] = { "slack", NULL };
 static const char *spotifycmd[] = { "spotify", NULL };
+static const char *firefoxcmd[] = { "firefox", NULL };
 
 #include "exitdwm.c"
 #include "movestack.c"
@@ -78,6 +80,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          {.v = cursorcmd } },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = slackcmd } },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = spotifycmd } },
+	{ MODKEY|ShiftMask,             XK_f,      spawn,          {.v = firefoxcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
